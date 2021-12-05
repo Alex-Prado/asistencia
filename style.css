@@ -1,0 +1,296 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+  scroll-behavior: smooth;
+  user-select: none !important;
+}
+:root {
+  --borderRadius: 5px;
+  --colorprincipal: #167fbd;
+  --coloropcional: #009688;
+}
+.navleft {
+  position: fixed;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+.navleft i {
+  height: calc(100% / 7);
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-direction: column;
+  cursor: pointer;
+}
+.navleft i span {
+  padding-top: 5px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.navleft i:nth-child(1) {
+  background-color: white;
+  border-right: 1px solid #ddd;
+  font-size: 2rem;
+}
+.navleft i:hover {
+  background: grey;
+  color: #fff;
+}
+
+.navtop {
+  height: 70px;
+  width: calc(100% - 60px);
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+}
+.navmenu {
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  width: 70%;
+  gap: 10px;
+  top: 6px;
+  left: 60px;
+  z-index: 1;
+  position: absolute;
+  background: #fff;
+}
+.navmenu .navtop__card {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 65%;
+  width: 12rem;
+  border-radius: var(--borderRadius);
+  box-shadow: 2px 2px 5px #ddd;
+}
+
+.navmenu .navtop__card i {
+  width: 18%;
+  margin-left: 5px;
+  height: 90%;
+  line-height: 42px;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  background: var(--coloropcional);
+  border-radius: var(--borderRadius);
+}
+/* .navmenu .navtop__card .fa-bath {
+  background: #ff9800;
+}
+.navmenu .navtop__card .fa-id-badge {
+  background: #ffc107;
+} */
+.navtop__card-text {
+  padding: 5px;
+}
+.navtop__card-text h5 {
+  font-size: 10px;
+}
+
+.navopciones {
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: end;
+  z-index: 200;
+}
+.navopciones .icono,
+.navopciones .toggle, 
+.navopciones .datos {
+  width: calc(20% / 3);
+  height: 50%;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+  color: var(--colorprincipal);
+  font-weight: 500;
+}
+.icono {
+  display: flex;
+}
+.toggle,
+.datos {
+  display: none;
+}
+
+.body {
+  background: #f9f9f9;
+  height: calc(100vh - 70px);
+  width: calc(100% - 60px);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.body .titulo {
+  width: 1100px;
+  max-width: 95%;
+  margin: 2rem auto;
+}
+.body .tabla-opciones {
+  width: 1100px;
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.tabla-opciones .formulario {
+  position: relative;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  width: 13rem;
+  box-shadow: 2px 2px 5px #999;
+  /* margin-left: 20px; */
+}
+.tabla-opciones .formulario i {
+  background: var(--colorprincipal);
+  position: relative;
+  display: inline-block;
+  line-height: 30px;
+  text-align: center;
+  width: 20%;
+  height: 100%;
+  color: #fff;
+  cursor: pointer;
+}
+
+.formulario input,
+.formulario select {
+  height: 100%;
+  width: 80%;
+  outline: none;
+  border: none;
+  padding-left: 5px;
+}
+.body .tabla {
+  width: 1100px;
+  max-width: 95%;
+  margin: 2rem auto;
+  background: #fff;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.tabla th,
+.tabla td {
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+.tabla thead tr {
+  background: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.tabla tbody tr {
+  background: #f9f9f9;
+}
+.tabla tbody tr:hover {
+  background: #ddd;
+}
+.tabla td i{
+  font-size: 1.3rem;
+  width: 30px;
+  height: 20px;
+  color: var(--coloropcional);
+  cursor: pointer;
+
+}
+/* .tabla td i:nth-child(2){
+  color: green;
+} */
+.tabla td:hover {
+  background: #888;
+  color: #fff;
+}
+@media (max-width: 600px) {
+  .toggle,
+  .datos {
+    display: flex;
+  }
+  .tabla-opciones .formulario {
+    margin-left: 0;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .body {
+    width: 100%;
+  }
+  .navtop{
+    width: 100%;
+    background:#fff;
+    z-index: 100;
+  }
+  .navmenu{
+    width: 100%;
+    left: 0;
+    flex-wrap: wrap;
+    top: -120px;
+    visibility: hidden;
+    transition: 0.5s;
+  }
+  .navmenu.active{
+    top: 70px;
+    visibility: visible;
+  }
+  .navmenu .navtop__card{
+    width: 100%;
+  }
+  .navleft {
+    left: -60px;
+    transition: 0.5s;
+    background: #fff;
+    z-index: 200;
+  }
+  .navopciones .icono, .navopciones .toggle, .navopciones .datos{
+    width: calc(35% / 3);
+    border: 1px solid #ddd;
+    margin-left: 4px;
+  }
+  .navleft.active {
+    left: 0;
+    transition: 0.5s;
+  }
+  .tabla thead {
+    display: none;
+  }
+  .tabla tbody tr,
+  .tabla tbody td {
+    display: block;
+    text-align: end;
+  }
+  .tabla tbody td {
+    padding: 10px;
+  }
+  .tabla tbody td::before {
+    content: attr(data-label);
+    text-transform: uppercase;
+    font-weight: 600;
+    float: left;
+  }
+  .tabla tbody tr {
+    margin: 5px;
+    box-shadow: 2px 2px 5px #999;
+    text-align: end;
+  }
+}

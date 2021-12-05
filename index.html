@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="navmenu">
+      <div class="navtop__card">
+        <i class="fa fa-user-circle" aria-hidden="true"></i>
+        <div class="navtop__card-text">
+          <h5>Ingresos de Hoy</h5>
+          <p>0</p>
+        </div>
+      </div>
+
+      <div class="navtop__card">
+        <i class="fa fa-id-badge" aria-hidden="true"></i>
+        <div class="navtop__card-text">
+          <h5>Salidas de Hoy</h5>
+          <p>0</p>
+        </div>
+      </div>
+
+      <div class="navtop__card">
+        <i class="fa fa-bath" aria-hidden="true"></i>
+        <div class="navtop__card-text">
+          <h5>Tardanzas de Hoy</h5>
+          <p>0</p>
+        </div>
+      </div>
+    </div>
+    <section class="navleft">
+      <i class="fa fa-user-circle" aria-hidden="true"></i>
+      <i class="fa fa-id-badge" aria-hidden="true"><span>texto</span></i>
+      <i class="fa fa-envelope-open-o" aria-hidden="true"><span>texto</span></i>
+      <i class="fa fa-id-badge" aria-hidden="true"><span>texto</span></i>
+      <i class="fa fa-user-circle" aria-hidden="true"><span>texto</span></i>
+      <i class="fa fa-envelope-open-o" aria-hidden="true"><span>texto</span></i>
+      <i class="fa fa-bath" aria-hidden="true"><span>texto</span></i>
+    </section>
+
+    <section class="navtop">
+      <div class="navopciones">
+        <i class="icono fa fa-id-badge" aria-hidden="true"></i>
+        <i class="icono fa fa-user-circle" aria-hidden="true"></i>
+        <i class="icono fa fa-envelope-open-o" aria-hidden="true"></i>
+        <i class="fa fa-user-circle datos" onclick="datos();" aria-hidden="true"></i>
+        <i class="fa fa-bars toggle" onclick="toggle();" aria-hidden="true"></i>
+      </div>
+    </section>
+
+    <section class="body">
+      <h2 class="titulo">Lista del Personal | Area</h2>
+      <div class="tabla-opciones">
+        
+        <form class="formulario" action="">
+          <i class="fa fa-filter" aria-hidden="true"></i>
+          <select name="" id="">
+            <option value="">--filtro--</option>
+            <option value="">valor</option>
+            <option value="">valor</option>
+          </select>
+        </form>
+
+        <form class="formulario" action="">
+          <i class="fa fa-filter" aria-hidden="true"></i>
+          <select name="" id="">
+            <option value="">--filtro--</option>
+            <option value="">valor</option>
+            <option value="">valor</option>
+          </select>
+        </form>
+
+        <form class="formulario" action="">
+          <i class="fa fa-filter" aria-hidden="true"></i>
+          <select name="" id="">
+            <option value="">--filtro--</option>
+            <option value="">valor</option>
+            <option value="">valor</option>
+          </select>
+        </form>
+
+        <form class="formulario" action="">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <input type="text" placeholder="buscar" />
+        </form>
+      </div>
+      <table class="tabla">
+        <thead>
+          <tr>
+            <th>nombre</th>
+            <th>apellido</th>
+            <th>area</th>
+            <th>opciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="NOMBRE">cuerpo</td>
+            <td data-label="APELLIDO">cuerpo</td>
+            <td data-label="AREA">cuerpo</td>
+            <td data-label="OPCIONES">
+              <i class="fa fa-trash-o" aria-hidden="true"></i>
+              <i class="fa fa-pencil" aria-hidden="true"></i>
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="NOMBRE">cuerpo</td>
+            <td data-label="APELLIDO">cuerpo</td>
+            <td data-label="AREA">cuerpo</td>
+            <td data-label="OPCIONES">
+              <i class="fa fa-trash-o" aria-hidden="true"></i>
+              <i class="fa fa-pencil" aria-hidden="true"></i>
+            </td>
+          </tr>
+
+          <tr>
+            <td data-label="NOMBRE">cuerpo</td>
+            <td data-label="APELLIDO">cuerpo</td>
+            <td data-label="AREA">cuerpo</td>
+            <td data-label="OPCIONES">
+              <i class="fa fa-trash-o" aria-hidden="true"></i>
+              <i class="fa fa-pencil" aria-hidden="true"></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <script>
+      const navleft = document.querySelector(".navleft");
+      const navmenu = document.querySelector(".navmenu");
+
+      function toggle() {
+        navleft.classList.toggle("active");
+        navmenu.classList.remove("active");
+      }
+      function datos() {
+        navmenu.classList.toggle("active");
+        navleft.classList.remove("active");
+      }
+    </script>
+  </body>
+</html>
