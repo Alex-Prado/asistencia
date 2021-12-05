@@ -182,6 +182,7 @@
   outline: none;
   border: none;
   padding-left: 5px;
+  background: #fff;
 }
 .body .tabla {
   width: 1100px;
@@ -249,13 +250,15 @@
     top: -120px;
     visibility: hidden;
     transition: 0.5s;
+    padding-left: 0px;
   }
   .navmenu.active{
     top: 70px;
     visibility: visible;
   }
   .navmenu .navtop__card{
-    width: 100%;
+    width: 95%;
+    margin: 0 auto;
   }
   .navleft {
     left: -60px;
